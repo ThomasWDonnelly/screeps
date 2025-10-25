@@ -1,6 +1,14 @@
 {
-	"folders": []
-	,"settings": {
+	"folders": [
+		{
+			"name": "Github Repo",
+			"path": "."
+		},
+		{
+			"path": "C:/Users/Thomas.ZEUS/ScreepsArena"
+		}
+	],
+	"settings": {
 		"files.exclude": {
 			"**/.git": true
 			,"**/.svn": true
@@ -13,5 +21,8 @@
 			,"**/.vscode": true
 			,"screeps.code-workspace": true
 		}
+		,"hide-files.files": [
+			"node_modules"
+		]
 	}
 }
