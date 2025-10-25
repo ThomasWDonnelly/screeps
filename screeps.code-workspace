@@ -1,11 +1,16 @@
 {
 	"folders": [
 		{
-			"name": "Github Repo",
+			"name": "Github Repositories",
 			"path": "."
 		},
 		{
+			"name": "Arena Client",
 			"path": "C:/Users/Thomas.ZEUS/ScreepsArena"
+		},
+		{
+			"name": "Local Temp",
+			"path": "../.local/Screeps"
 		}
 	],
 	"settings": {
@@ -23,6 +28,9 @@
 		}
 		,"hide-files.files": [
 			"node_modules"
-		]
+		],
+		"workbench.colorCustomizations": {
+
+		}
 	}
 }
