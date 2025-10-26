@@ -1,15 +1,15 @@
 {
 	"folders": [
 		{
-			"name": "Github Repositories",
+			"name": "Github",
 			"path": "."
 		},
 		{
-			"name": "Arena Client",
+			"name": "ScreepsArena",
 			"path": "C:/Users/Thomas.ZEUS/ScreepsArena"
 		},
 		{
-			"name": "Local Temp",
+			"name": ".Local",
 			"path": "../.local/Screeps"
 		}
 	],
