@@ -35,6 +35,31 @@ const spawnManager = {
             }
         }
 
+        // Prophecy-Driven Spawning
+        const prophecy = Memory.oracle ? Memory.oracle.prophecy : null;
+        if (prophecy && prophecy.type === 'STOCKPILE') {
+            const targetResource = prophecy.target.resource;
+
+            // Is the target a raw mineral we can mine in this room?
+            const mineral = spawn.room.find(FIND_MINERALS)[0];
+            if (mineral && mineral.mineralType === targetResource) {
+                const hasExtractor = mineral.pos.lookFor(LOOK_STRUCTURES).some(s => s.structureType === STRUCTURE_EXTRACTOR);
+                if (hasExtractor) {
+                    // Prioritize a dedicated miner for the prophecy resource
+                    const mineralMiners = _.filter(Game.creeps, c => c.memory.role === 'miner' && c.memory.targetMineral === targetResource);
+                    if (mineralMiners.length < 1) {
+                        let newName = this.getNameFromRegistry('philosophersNames');
+                        console.log(`[Prophecy] Spawning miner for ${targetResource}: ${newName}`);
+                        spawn.spawnCreep(this.getCreepBody(spawn.room, 'miner'), newName, {
+                            memory: { role: 'miner', targetMineral: targetResource }
+                        });
+                        return; // Prioritize this spawn
+                    }
+                }
+            }
+        }
+
+
         // Auto-Spawn Creeps if less than n
         if (getCount('harvester') < 4) {
             let newName = this.getNameFromRegistry('genericNames');

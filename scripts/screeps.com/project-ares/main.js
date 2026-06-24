@@ -52,7 +52,7 @@ let roleTowerManager = require('manager.tower');
 let roleConstructionManager = require('manager.construction');
 let roleLinkManager = require('manager.link');
 let roleObserverManager = require('manager.observer');
-let roleVisualManager = require('manager.visual');
+let visualManager = require('manager.visual');
 let heralds = require('heralds');
 let oracleAtDelphi = require('oracleAtDelphi');
 
@@ -179,7 +179,7 @@ module.exports.loop = function () {
         let room = Game.rooms[name];
         if (room.controller && room.controller.my) {
             // Pass roleCounts for the specific room if needed, or global for now
-            roleVisualManager.run(room, _.countBy(_.filter(Game.creeps, c => c.room.name === name), c => c.memory.role));
+            visualManager.run(room, _.countBy(_.filter(Game.creeps, c => c.room.name === name), c => c.memory.role));
         }
     }
     //#endregion

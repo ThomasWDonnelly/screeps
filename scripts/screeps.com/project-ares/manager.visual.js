@@ -1,9 +1,5 @@
-/**
- * Role: Visual Manager
- *
- * Draws helpful information onto the screen for a given room.
- * This includes controller progress, energy levels, creep counts, and more.
- */
+// Draws helpful information onto the screen for a given room.
+// This includes controller progress, energy levels, creep counts, and more.
 const oracleAtDelphi = require('oracleAtDelphi');
 const roleVisualManager = {
     /**
