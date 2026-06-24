@@ -1,0 +1,1 @@
+//TODO: Define and Implement Oracles functionality in the game logic, including prophecy generation, interpretation, and influence on gameplay
