@@ -50,6 +50,7 @@ let roleArchaeologist = require('role.archaeologist');
 let diplomacyManager = require('diplomacy');
 let roleTowerManager = require('role.towerManager');
 let roleConstructionManager = require('role.constructionManager');
+let roleLinkManager = require('role.linkManager');
 
 require('require');
 global.config = require('config');
@@ -172,31 +173,10 @@ module.exports.loop = function () {
 
     //#region Link System
     // (Transfer Energy from Source to Controller/Storage)
-    if (spawn && spawn.room.controller.level >= 5) {
-        const links = spawn.room.find(FIND_MY_STRUCTURES, {
-            filter: { structureType: STRUCTURE_LINK }
-        });
-
-        let sourceLinks = [];
-        let targetLinks = [];
-
-        for (let link of links) {
-            // If link is near a source (range 2), it's a sender
-            if (link.pos.findInRange(FIND_SOURCES, 2).length > 0) {
-                sourceLinks.push(link);
-            } else {
-                targetLinks.push(link);
-            }
-        }
-
-        for (let sourceLink of sourceLinks) {
-            // If source link is full, transfer to a target link
-            if (sourceLink.store.getUsedCapacity(RESOURCE_ENERGY) >= 700) {
-                let target = targetLinks.find(l => l.store.getFreeCapacity(RESOURCE_ENERGY) > 0);
-                if (target) {
-                    sourceLink.transferEnergy(target);
-                }
-            }
+    for (let name in Game.rooms) {
+        let room = Game.rooms[name];
+        if (room.controller && room.controller.my) {
+            roleLinkManager.run(room);
         }
     }
     //#endregion
