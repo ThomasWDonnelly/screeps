@@ -4,3 +4,683 @@
 **bak
 *-lock.json
 **node_modules
+User Data/BrowserMetrics-spare.pma
+User Data/CrashpadMetrics-active.pma
+User Data/First Run
+User Data/Last Browser
+User Data/Last Version
+User Data/Local State
+User Data/lockfile
+User Data/Variations
+User Data/Crashpad/metadata
+User Data/Crashpad/settings.dat
+User Data/Crashpad/reports/9678a995-5975-4ff4-9578-6fa28fa46023.dmp
+User Data/Crashpad/reports/168098f9-428e-4ce3-bdd5-c0595641e0d4.dmp
+User Data/Default/Account Web Data
+User Data/Default/Account Web Data-journal
+User Data/Default/Affiliation Database
+User Data/Default/Affiliation Database-journal
+User Data/Default/BookmarkMergedSurfaceOrdering
+User Data/Default/BrowsingTopicsSiteData
+User Data/Default/BrowsingTopicsSiteData-journal
+User Data/Default/BrowsingTopicsState
+User Data/Default/DIPS
+User Data/Default/DIPS-wal
+User Data/Default/Extension Cookies
+User Data/Default/Extension Cookies-journal
+User Data/Default/Favicons
+User Data/Default/Favicons-journal
+User Data/Default/Google Profile.ico
+User Data/Default/heavy_ad_intervention_opt_out.db
+User Data/Default/heavy_ad_intervention_opt_out.db-journal
+User Data/Default/History
+User Data/Default/History-journal
+User Data/Default/LOCK
+User Data/Default/LOG
+User Data/Default/LOG.old
+User Data/Default/Login Data
+User Data/Default/Login Data For Account
+User Data/Default/Login Data For Account-journal
+User Data/Default/Login Data-journal
+User Data/Default/Network Action Predictor
+User Data/Default/Network Action Predictor-journal
+User Data/Default/Preferences
+User Data/Default/PreferredApps
+User Data/Default/previews_opt_out.db
+User Data/Default/previews_opt_out.db-journal
+User Data/Default/README
+User Data/Default/Secure Preferences
+User Data/Default/ServerCertificate
+User Data/Default/ServerCertificate-journal
+User Data/Default/SharedStorage
+User Data/Default/SharedStorage-wal
+User Data/Default/Shortcuts
+User Data/Default/Shortcuts-journal
+User Data/Default/Top Sites
+User Data/Default/Top Sites-journal
+User Data/Default/Visited Links
+User Data/Default/Web Data
+User Data/Default/Web Data-journal
+User Data/Default/AutofillStrikeDatabase/LOCK
+User Data/Default/AutofillStrikeDatabase/LOG
+User Data/Default/AutofillStrikeDatabase/LOG.old
+User Data/Default/Cache/Cache_Data/data_0
+User Data/Default/Cache/Cache_Data/data_1
+User Data/Default/Cache/Cache_Data/data_2
+User Data/Default/Cache/Cache_Data/data_3
+User Data/Default/Cache/Cache_Data/f_0000a0
+User Data/Default/Cache/Cache_Data/f_0000a1
+User Data/Default/Cache/Cache_Data/f_0000a2
+User Data/Default/Cache/Cache_Data/f_0000a3
+User Data/Default/Cache/Cache_Data/f_0000a4
+User Data/Default/Cache/Cache_Data/f_0000a5
+User Data/Default/Cache/Cache_Data/f_0000a6
+User Data/Default/Cache/Cache_Data/f_0000a7
+User Data/Default/Cache/Cache_Data/f_0000a8
+User Data/Default/Cache/Cache_Data/f_0000a9
+User Data/Default/Cache/Cache_Data/f_0000aa
+User Data/Default/Cache/Cache_Data/f_0000ab
+User Data/Default/Cache/Cache_Data/f_0000ac
+User Data/Default/Cache/Cache_Data/f_0000ad
+User Data/Default/Cache/Cache_Data/f_0000ae
+User Data/Default/Cache/Cache_Data/f_0000af
+User Data/Default/Cache/Cache_Data/f_0000b0
+User Data/Default/Cache/Cache_Data/f_0000b1
+User Data/Default/Cache/Cache_Data/f_0000b2
+User Data/Default/Cache/Cache_Data/f_0000b3
+User Data/Default/Cache/Cache_Data/f_0000b4
+User Data/Default/Cache/Cache_Data/f_0000b5
+User Data/Default/Cache/Cache_Data/f_0000b6
+User Data/Default/Cache/Cache_Data/f_0000b7
+User Data/Default/Cache/Cache_Data/f_0000b8
+User Data/Default/Cache/Cache_Data/f_0000b9
+User Data/Default/Cache/Cache_Data/f_0000ba
+User Data/Default/Cache/Cache_Data/f_0000bb
+User Data/Default/Cache/Cache_Data/f_0000bc
+User Data/Default/Cache/Cache_Data/f_0000bd
+User Data/Default/Cache/Cache_Data/f_0000be
+User Data/Default/Cache/Cache_Data/f_0000bf
+User Data/Default/Cache/Cache_Data/f_0000c0
+User Data/Default/Cache/Cache_Data/f_0000c1
+User Data/Default/Cache/Cache_Data/f_0000c2
+User Data/Default/Cache/Cache_Data/f_0000c3
+User Data/Default/Cache/Cache_Data/f_0000c4
+User Data/Default/Cache/Cache_Data/f_0000c5
+User Data/Default/Cache/Cache_Data/f_0000c6
+User Data/Default/Cache/Cache_Data/f_0000c7
+User Data/Default/Cache/Cache_Data/f_0000c8
+User Data/Default/Cache/Cache_Data/f_0000c9
+User Data/Default/Cache/Cache_Data/f_0000ca
+User Data/Default/Cache/Cache_Data/f_0000cb
+User Data/Default/Cache/Cache_Data/f_0000cc
+User Data/Default/Cache/Cache_Data/f_0000cd
+User Data/Default/Cache/Cache_Data/f_0000ce
+User Data/Default/Cache/Cache_Data/f_0000cf
+User Data/Default/Cache/Cache_Data/f_0000d0
+User Data/Default/Cache/Cache_Data/f_0000d1
+User Data/Default/Cache/Cache_Data/f_0000d2
+User Data/Default/Cache/Cache_Data/f_0000d3
+User Data/Default/Cache/Cache_Data/f_0000d4
+User Data/Default/Cache/Cache_Data/f_0000d5
+User Data/Default/Cache/Cache_Data/f_0000d6
+User Data/Default/Cache/Cache_Data/f_0000d7
+User Data/Default/Cache/Cache_Data/f_0000d8
+User Data/Default/Cache/Cache_Data/f_0000d9
+User Data/Default/Cache/Cache_Data/f_0000da
+User Data/Default/Cache/Cache_Data/f_0000db
+User Data/Default/Cache/Cache_Data/f_0000dc
+User Data/Default/Cache/Cache_Data/f_0000dd
+User Data/Default/Cache/Cache_Data/f_0000de
+User Data/Default/Cache/Cache_Data/f_0000df
+User Data/Default/Cache/Cache_Data/f_0000e0
+User Data/Default/Cache/Cache_Data/f_0000e1
+User Data/Default/Cache/Cache_Data/f_0000e2
+User Data/Default/Cache/Cache_Data/f_0000e3
+User Data/Default/Cache/Cache_Data/f_0000e4
+User Data/Default/Cache/Cache_Data/f_0000e5
+User Data/Default/Cache/Cache_Data/f_0000e6
+User Data/Default/Cache/Cache_Data/f_0000e7
+User Data/Default/Cache/Cache_Data/f_0000e8
+User Data/Default/Cache/Cache_Data/f_0000e9
+User Data/Default/Cache/Cache_Data/f_0000ea
+User Data/Default/Cache/Cache_Data/f_0000eb
+User Data/Default/Cache/Cache_Data/f_0000ec
+User Data/Default/Cache/Cache_Data/f_0000ed
+User Data/Default/Cache/Cache_Data/f_0000ee
+User Data/Default/Cache/Cache_Data/f_0000ef
+User Data/Default/Cache/Cache_Data/f_0000f0
+User Data/Default/Cache/Cache_Data/f_0000f1
+User Data/Default/Cache/Cache_Data/f_0000f2
+User Data/Default/Cache/Cache_Data/f_0000f3
+User Data/Default/Cache/Cache_Data/f_0000f4
+User Data/Default/Cache/Cache_Data/f_0000f5
+User Data/Default/Cache/Cache_Data/f_0000f6
+User Data/Default/Cache/Cache_Data/f_0000f7
+User Data/Default/Cache/Cache_Data/f_0000f8
+User Data/Default/Cache/Cache_Data/f_0000f9
+User Data/Default/Cache/Cache_Data/f_0000fa
+User Data/Default/Cache/Cache_Data/f_0000fb
+User Data/Default/Cache/Cache_Data/f_0000fc
+User Data/Default/Cache/Cache_Data/f_0000fd
+User Data/Default/Cache/Cache_Data/f_0000fe
+User Data/Default/Cache/Cache_Data/f_0000ff
+User Data/Default/Cache/Cache_Data/f_00002a
+User Data/Default/Cache/Cache_Data/f_00002b
+User Data/Default/Cache/Cache_Data/f_00002c
+User Data/Default/Cache/Cache_Data/f_00002d
+User Data/Default/Cache/Cache_Data/f_00002e
+User Data/Default/Cache/Cache_Data/f_00002f
+User Data/Default/Cache/Cache_Data/f_00003a
+User Data/Default/Cache/Cache_Data/f_00003b
+User Data/Default/Cache/Cache_Data/f_00003c
+User Data/Default/Cache/Cache_Data/f_00003d
+User Data/Default/Cache/Cache_Data/f_00003e
+User Data/Default/Cache/Cache_Data/f_00003f
+User Data/Default/Cache/Cache_Data/f_00004a
+User Data/Default/Cache/Cache_Data/f_00004b
+User Data/Default/Cache/Cache_Data/f_00004c
+User Data/Default/Cache/Cache_Data/f_00004d
+User Data/Default/Cache/Cache_Data/f_00004e
+User Data/Default/Cache/Cache_Data/f_00004f
+User Data/Default/Cache/Cache_Data/f_00005a
+User Data/Default/Cache/Cache_Data/f_00005c
+User Data/Default/Cache/Cache_Data/f_00005d
+User Data/Default/Cache/Cache_Data/f_00005e
+User Data/Default/Cache/Cache_Data/f_00005f
+User Data/Default/Cache/Cache_Data/f_00006a
+User Data/Default/Cache/Cache_Data/f_00006b
+User Data/Default/Cache/Cache_Data/f_00006c
+User Data/Default/Cache/Cache_Data/f_00006d
+User Data/Default/Cache/Cache_Data/f_00006e
+User Data/Default/Cache/Cache_Data/f_00006f
+User Data/Default/Cache/Cache_Data/f_00007a
+User Data/Default/Cache/Cache_Data/f_00007b
+User Data/Default/Cache/Cache_Data/f_00007c
+User Data/Default/Cache/Cache_Data/f_00007d
+User Data/Default/Cache/Cache_Data/f_00007e
+User Data/Default/Cache/Cache_Data/f_00007f
+User Data/Default/Cache/Cache_Data/f_00008a
+User Data/Default/Cache/Cache_Data/f_00008b
+User Data/Default/Cache/Cache_Data/f_00008c
+User Data/Default/Cache/Cache_Data/f_00008d
+User Data/Default/Cache/Cache_Data/f_00008e
+User Data/Default/Cache/Cache_Data/f_00008f
+User Data/Default/Cache/Cache_Data/f_00009a
+User Data/Default/Cache/Cache_Data/f_00009b
+User Data/Default/Cache/Cache_Data/f_00009c
+User Data/Default/Cache/Cache_Data/f_00009d
+User Data/Default/Cache/Cache_Data/f_00009e
+User Data/Default/Cache/Cache_Data/f_00009f
+User Data/Default/Cache/Cache_Data/f_00010a
+User Data/Default/Cache/Cache_Data/f_00010b
+User Data/Default/Cache/Cache_Data/f_00010c
+User Data/Default/Cache/Cache_Data/f_00010d
+User Data/Default/Cache/Cache_Data/f_00010e
+User Data/Default/Cache/Cache_Data/f_00010f
+User Data/Default/Cache/Cache_Data/f_00011a
+User Data/Default/Cache/Cache_Data/f_00011b
+User Data/Default/Cache/Cache_Data/f_00011c
+User Data/Default/Cache/Cache_Data/f_00011d
+User Data/Default/Cache/Cache_Data/f_00011e
+User Data/Default/Cache/Cache_Data/f_00011f
+User Data/Default/Cache/Cache_Data/f_000026
+User Data/Default/Cache/Cache_Data/f_000027
+User Data/Default/Cache/Cache_Data/f_000028
+User Data/Default/Cache/Cache_Data/f_000029
+User Data/Default/Cache/Cache_Data/f_000030
+User Data/Default/Cache/Cache_Data/f_000031
+User Data/Default/Cache/Cache_Data/f_000032
+User Data/Default/Cache/Cache_Data/f_000033
+User Data/Default/Cache/Cache_Data/f_000034
+User Data/Default/Cache/Cache_Data/f_000035
+User Data/Default/Cache/Cache_Data/f_000036
+User Data/Default/Cache/Cache_Data/f_000037
+User Data/Default/Cache/Cache_Data/f_000038
+User Data/Default/Cache/Cache_Data/f_000039
+User Data/Default/Cache/Cache_Data/f_000040
+User Data/Default/Cache/Cache_Data/f_000041
+User Data/Default/Cache/Cache_Data/f_000042
+User Data/Default/Cache/Cache_Data/f_000043
+User Data/Default/Cache/Cache_Data/f_000044
+User Data/Default/Cache/Cache_Data/f_000045
+User Data/Default/Cache/Cache_Data/f_000046
+User Data/Default/Cache/Cache_Data/f_000047
+User Data/Default/Cache/Cache_Data/f_000048
+User Data/Default/Cache/Cache_Data/f_000049
+User Data/Default/Cache/Cache_Data/f_000050
+User Data/Default/Cache/Cache_Data/f_000051
+User Data/Default/Cache/Cache_Data/f_000052
+User Data/Default/Cache/Cache_Data/f_000053
+User Data/Default/Cache/Cache_Data/f_000054
+User Data/Default/Cache/Cache_Data/f_000055
+User Data/Default/Cache/Cache_Data/f_000056
+User Data/Default/Cache/Cache_Data/f_000057
+User Data/Default/Cache/Cache_Data/f_000058
+User Data/Default/Cache/Cache_Data/f_000059
+User Data/Default/Cache/Cache_Data/f_000060
+User Data/Default/Cache/Cache_Data/f_000061
+User Data/Default/Cache/Cache_Data/f_000062
+User Data/Default/Cache/Cache_Data/f_000063
+User Data/Default/Cache/Cache_Data/f_000064
+User Data/Default/Cache/Cache_Data/f_000065
+User Data/Default/Cache/Cache_Data/f_000066
+User Data/Default/Cache/Cache_Data/f_000067
+User Data/Default/Cache/Cache_Data/f_000068
+User Data/Default/Cache/Cache_Data/f_000069
+User Data/Default/Cache/Cache_Data/f_000070
+User Data/Default/Cache/Cache_Data/f_000071
+User Data/Default/Cache/Cache_Data/f_000072
+User Data/Default/Cache/Cache_Data/f_000073
+User Data/Default/Cache/Cache_Data/f_000074
+User Data/Default/Cache/Cache_Data/f_000075
+User Data/Default/Cache/Cache_Data/f_000076
+User Data/Default/Cache/Cache_Data/f_000077
+User Data/Default/Cache/Cache_Data/f_000078
+User Data/Default/Cache/Cache_Data/f_000079
+User Data/Default/Cache/Cache_Data/f_000080
+User Data/Default/Cache/Cache_Data/f_000081
+User Data/Default/Cache/Cache_Data/f_000082
+User Data/Default/Cache/Cache_Data/f_000083
+User Data/Default/Cache/Cache_Data/f_000084
+User Data/Default/Cache/Cache_Data/f_000085
+User Data/Default/Cache/Cache_Data/f_000086
+User Data/Default/Cache/Cache_Data/f_000087
+User Data/Default/Cache/Cache_Data/f_000088
+User Data/Default/Cache/Cache_Data/f_000089
+User Data/Default/Cache/Cache_Data/f_000090
+User Data/Default/Cache/Cache_Data/f_000091
+User Data/Default/Cache/Cache_Data/f_000092
+User Data/Default/Cache/Cache_Data/f_000093
+User Data/Default/Cache/Cache_Data/f_000094
+User Data/Default/Cache/Cache_Data/f_000095
+User Data/Default/Cache/Cache_Data/f_000096
+User Data/Default/Cache/Cache_Data/f_000097
+User Data/Default/Cache/Cache_Data/f_000098
+User Data/Default/Cache/Cache_Data/f_000099
+User Data/Default/Cache/Cache_Data/f_000100
+User Data/Default/Cache/Cache_Data/f_000101
+User Data/Default/Cache/Cache_Data/f_000102
+User Data/Default/Cache/Cache_Data/f_000103
+User Data/Default/Cache/Cache_Data/f_000104
+User Data/Default/Cache/Cache_Data/f_000105
+User Data/Default/Cache/Cache_Data/f_000106
+User Data/Default/Cache/Cache_Data/f_000107
+User Data/Default/Cache/Cache_Data/f_000108
+User Data/Default/Cache/Cache_Data/f_000109
+User Data/Default/Cache/Cache_Data/f_000110
+User Data/Default/Cache/Cache_Data/f_000111
+User Data/Default/Cache/Cache_Data/f_000112
+User Data/Default/Cache/Cache_Data/f_000113
+User Data/Default/Cache/Cache_Data/f_000114
+User Data/Default/Cache/Cache_Data/f_000115
+User Data/Default/Cache/Cache_Data/f_000116
+User Data/Default/Cache/Cache_Data/f_000117
+User Data/Default/Cache/Cache_Data/f_000118
+User Data/Default/Cache/Cache_Data/f_000119
+User Data/Default/Cache/Cache_Data/f_000120
+User Data/Default/Cache/Cache_Data/f_000121
+User Data/Default/Cache/Cache_Data/f_000122
+User Data/Default/Cache/Cache_Data/f_000123
+User Data/Default/Cache/Cache_Data/f_000124
+User Data/Default/Cache/Cache_Data/index
+User Data/Default/ClientCertificates/LOCK
+User Data/Default/ClientCertificates/LOG
+User Data/Default/ClientCertificates/LOG.old
+User Data/Default/Code Cache/js/00d8869c615168b2_0
+User Data/Default/Code Cache/js/0f1c30d837f301bf_0
+User Data/Default/Code Cache/js/1aa03ab7dfdc0fda_0
+User Data/Default/Code Cache/js/1de3ff52bd83d5ef_0
+User Data/Default/Code Cache/js/2b79c0fe2c401227_0
+User Data/Default/Code Cache/js/2fb46fa0bf52845a_0
+User Data/Default/Code Cache/js/4b4de594fb763219_0
+User Data/Default/Code Cache/js/4f65499ca29efe5c_0
+User Data/Default/Code Cache/js/8d4323bfae5a8e4d_0
+User Data/Default/Code Cache/js/8db95827f342b757_0
+User Data/Default/Code Cache/js/8f949e67c128cf7a_0
+User Data/Default/Code Cache/js/25c51af5f5f8e48c_0
+User Data/Default/Code Cache/js/27ab16f521f8f7c6_0
+User Data/Default/Code Cache/js/29d420e9f2e12fb6_0
+User Data/Default/Code Cache/js/36bb803f6a9f790f_0
+User Data/Default/Code Cache/js/55dc6fddda970e1c_0
+User Data/Default/Code Cache/js/56da3ba1374916f6_0
+User Data/Default/Code Cache/js/70eb014eebcb393b_0
+User Data/Default/Code Cache/js/77cea9ff5526dd1b_0
+User Data/Default/Code Cache/js/127ca2987e9c4fb2_0
+User Data/Default/Code Cache/js/534cbde6ef0ead21_0
+User Data/Default/Code Cache/js/0553cc5cb5db3047_0
+User Data/Default/Code Cache/js/659d084c0818f8bf_0
+User Data/Default/Code Cache/js/670aa8de66168aff_0
+User Data/Default/Code Cache/js/693f850ee16c18c8_0
+User Data/Default/Code Cache/js/764bd462cefdc8b4_0
+User Data/Default/Code Cache/js/778f2a3b25d85afb_0
+User Data/Default/Code Cache/js/945f11a4f1ac215e_0
+User Data/Default/Code Cache/js/964fabf9e90b2622_0
+User Data/Default/Code Cache/js/3826c7944d437e0d_0
+User Data/Default/Code Cache/js/04608bc6f2093706_0
+User Data/Default/Code Cache/js/7152b1982ecfe1e6_0
+User Data/Default/Code Cache/js/7537aad3029edf12_0
+User Data/Default/Code Cache/js/18934fba395bd671_0
+User Data/Default/Code Cache/js/23409dd461bbfcaa_0
+User Data/Default/Code Cache/js/247514e875593973_0
+User Data/Default/Code Cache/js/332332a48184adfb_0
+User Data/Default/Code Cache/js/703559d31970a48b_0
+User Data/Default/Code Cache/js/1269785ca02f4f85_0
+User Data/Default/Code Cache/js/3572135ae7779d5b_0
+User Data/Default/Code Cache/js/85553780f3cf0546_0
+User Data/Default/Code Cache/js/ad2b0908a88e746f_0
+User Data/Default/Code Cache/js/b4f784fea12def38_0
+User Data/Default/Code Cache/js/b6fb61693d040828_0
+User Data/Default/Code Cache/js/b7fb24cde2c1625e_0
+User Data/Default/Code Cache/js/b15f4ea286c4b93a_0
+User Data/Default/Code Cache/js/b46bd604a8657472_0
+User Data/Default/Code Cache/js/b331b41bf88a80e2_0
+User Data/Default/Code Cache/js/b1901bc91c41eb9b_0
+User Data/Default/Code Cache/js/ba4f8b7404278ef7_0
+User Data/Default/Code Cache/js/c98a343b8a33c85c_0
+User Data/Default/Code Cache/js/c978ee8f633330d1_0
+User Data/Default/Code Cache/js/d2be0bf8d7a003cc_0
+User Data/Default/Code Cache/js/d859bad0d95c1e52_0
+User Data/Default/Code Cache/js/d943bc086ab153a0_0
+User Data/Default/Code Cache/js/e178f7c06ed95a66_0
+User Data/Default/Code Cache/js/index
+User Data/Default/Code Cache/js/index-dir/the-real-index
+User Data/Default/Code Cache/wasm/index
+User Data/Default/Code Cache/wasm/index-dir/the-real-index
+User Data/Default/DawnGraphiteCache/data_0
+User Data/Default/DawnGraphiteCache/data_1
+User Data/Default/DawnGraphiteCache/data_2
+User Data/Default/DawnGraphiteCache/data_3
+User Data/Default/DawnGraphiteCache/index
+User Data/Default/DawnWebGPUCache/data_0
+User Data/Default/DawnWebGPUCache/data_1
+User Data/Default/DawnWebGPUCache/data_2
+User Data/Default/DawnWebGPUCache/data_3
+User Data/Default/DawnWebGPUCache/index
+User Data/Default/Download Service/EntryDB/LOCK
+User Data/Default/Download Service/EntryDB/LOG
+User Data/Default/Download Service/EntryDB/LOG.old
+User Data/Default/Extension Rules/000003.log
+User Data/Default/Extension Rules/CURRENT
+User Data/Default/Extension Rules/LOCK
+User Data/Default/Extension Rules/LOG
+User Data/Default/Extension Rules/LOG.old
+User Data/Default/Extension Rules/MANIFEST-000001
+User Data/Default/Extension Scripts/000003.log
+User Data/Default/Extension Scripts/CURRENT
+User Data/Default/Extension Scripts/LOCK
+User Data/Default/Extension Scripts/LOG
+User Data/Default/Extension Scripts/LOG.old
+User Data/Default/Extension Scripts/MANIFEST-000001
+User Data/Default/Extension State/000003.log
+User Data/Default/Extension State/CURRENT
+User Data/Default/Extension State/LOCK
+User Data/Default/Extension State/LOG
+User Data/Default/Extension State/LOG.old
+User Data/Default/Extension State/MANIFEST-000001
+User Data/Default/Feature Engagement Tracker/AvailabilityDB/LOCK
+User Data/Default/Feature Engagement Tracker/AvailabilityDB/LOG
+User Data/Default/Feature Engagement Tracker/AvailabilityDB/LOG.old
+User Data/Default/Feature Engagement Tracker/EventDB/LOCK
+User Data/Default/Feature Engagement Tracker/EventDB/LOG
+User Data/Default/Feature Engagement Tracker/EventDB/LOG.old
+User Data/Default/GCM Store/Encryption/000003.log
+User Data/Default/GCM Store/Encryption/CURRENT
+User Data/Default/GCM Store/Encryption/LOCK
+User Data/Default/GCM Store/Encryption/LOG
+User Data/Default/GCM Store/Encryption/LOG.old
+User Data/Default/GCM Store/Encryption/MANIFEST-000001
+User Data/Default/GPUCache/data_0
+User Data/Default/GPUCache/data_1
+User Data/Default/GPUCache/data_2
+User Data/Default/GPUCache/data_3
+User Data/Default/GPUCache/index
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000067.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000095.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000096.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000097.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000098.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000099.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000100.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000101.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000112.log
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000114.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/000115.ldb
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/CURRENT
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/LOCK
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/LOG
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/LOG.old
+User Data/Default/IndexedDB/chrome-extension_cknihipnnkgolgdlfodbibfmdmhhbmlb_0.indexeddb.leveldb/MANIFEST-000001
+User Data/Default/Local Storage/leveldb/000005.ldb
+User Data/Default/Local Storage/leveldb/002320.log
+User Data/Default/Local Storage/leveldb/002322.ldb
+User Data/Default/Local Storage/leveldb/CURRENT
+User Data/Default/Local Storage/leveldb/LOCK
+User Data/Default/Local Storage/leveldb/LOG
+User Data/Default/Local Storage/leveldb/LOG.old
+User Data/Default/Local Storage/leveldb/MANIFEST-000001
+User Data/Default/Network/Cookies
+User Data/Default/Network/Cookies-journal
+User Data/Default/Network/Network Persistent State
+User Data/Default/Network/NetworkDataMigrated
+User Data/Default/Network/Reporting and NEL
+User Data/Default/Network/Reporting and NEL-journal
+User Data/Default/Network/SCT Auditing Pending Reports
+User Data/Default/Network/TransportSecurity
+User Data/Default/Network/Trust Tokens
+User Data/Default/Network/Trust Tokens-journal
+User Data/Default/PersistentOriginTrials/LOCK
+User Data/Default/PersistentOriginTrials/LOG
+User Data/Default/PersistentOriginTrials/LOG.old
+User Data/Default/Platform Notifications/000003.log
+User Data/Default/Platform Notifications/CURRENT
+User Data/Default/Platform Notifications/LOCK
+User Data/Default/Platform Notifications/LOG
+User Data/Default/Platform Notifications/LOG.old
+User Data/Default/Platform Notifications/MANIFEST-000001
+User Data/Default/Safe Browsing Network/NetworkDataMigrated
+User Data/Default/Safe Browsing Network/Safe Browsing Cookies
+User Data/Default/Safe Browsing Network/Safe Browsing Cookies-journal
+User Data/Default/Segmentation Platform/SegmentInfoDB/LOCK
+User Data/Default/Segmentation Platform/SegmentInfoDB/LOG
+User Data/Default/Segmentation Platform/SegmentInfoDB/LOG.old
+User Data/Default/Segmentation Platform/SignalDB/LOCK
+User Data/Default/Segmentation Platform/SignalDB/LOG
+User Data/Default/Segmentation Platform/SignalDB/LOG.old
+User Data/Default/Segmentation Platform/SignalStorageConfigDB/LOCK
+User Data/Default/Segmentation Platform/SignalStorageConfigDB/LOG
+User Data/Default/Segmentation Platform/SignalStorageConfigDB/LOG.old
+User Data/Default/Session Storage/000003.log
+User Data/Default/Session Storage/CURRENT
+User Data/Default/Session Storage/LOCK
+User Data/Default/Session Storage/LOG
+User Data/Default/Session Storage/LOG.old
+User Data/Default/Session Storage/MANIFEST-000001
+User Data/Default/Sessions/Session_13426736642845090
+User Data/Default/Sessions/Session_13426736743954721
+User Data/Default/Sessions/Tabs_13426729241359936
+User Data/Default/Sessions/Tabs_13426736744558418
+User Data/Default/Shared Dictionary/db
+User Data/Default/Shared Dictionary/db-journal
+User Data/Default/Shared Dictionary/cache/index
+User Data/Default/Shared Dictionary/cache/index-dir/the-real-index
+User Data/Default/Site Characteristics Database/000003.log
+User Data/Default/Site Characteristics Database/CURRENT
+User Data/Default/Site Characteristics Database/LOCK
+User Data/Default/Site Characteristics Database/LOG
+User Data/Default/Site Characteristics Database/LOG.old
+User Data/Default/Site Characteristics Database/MANIFEST-000001
+User Data/Default/Sync Data/LevelDB/000003.log
+User Data/Default/Sync Data/LevelDB/CURRENT
+User Data/Default/Sync Data/LevelDB/LOCK
+User Data/Default/Sync Data/LevelDB/LOG
+User Data/Default/Sync Data/LevelDB/LOG.old
+User Data/Default/Sync Data/LevelDB/MANIFEST-000001
+User Data/Default/VideoDecodeStats/LOCK
+User Data/Default/VideoDecodeStats/LOG
+User Data/Default/VideoDecodeStats/LOG.old
+User Data/Default/Web Applications/_nwjs_cknihipnnkgolgdlfodbibfmdmhhbmlb/Screeps.ico
+User Data/Default/Web Applications/_nwjs_cknihipnnkgolgdlfodbibfmdmhhbmlb/Screeps.ico.md5
+User Data/Default/WebStorage/QuotaManager
+User Data/Default/WebStorage/QuotaManager-journal
+User Data/Default/chrome_cart_db/LOCK
+User Data/Default/chrome_cart_db/LOG
+User Data/Default/chrome_cart_db/LOG.old
+User Data/Default/commerce_subscription_db/LOCK
+User Data/Default/commerce_subscription_db/LOG
+User Data/Default/commerce_subscription_db/LOG.old
+User Data/Default/coupon_db/LOCK
+User Data/Default/coupon_db/LOG
+User Data/Default/coupon_db/LOG.old
+User Data/Default/data_reduction_proxy_leveldb/000017.log
+User Data/Default/data_reduction_proxy_leveldb/CURRENT
+User Data/Default/data_reduction_proxy_leveldb/LOCK
+User Data/Default/data_reduction_proxy_leveldb/LOG
+User Data/Default/data_reduction_proxy_leveldb/LOG.old
+User Data/Default/data_reduction_proxy_leveldb/MANIFEST-000016
+User Data/Default/discount_infos_db/LOCK
+User Data/Default/discount_infos_db/LOG
+User Data/Default/discount_infos_db/LOG.old
+User Data/Default/discounts_db/LOCK
+User Data/Default/discounts_db/LOG
+User Data/Default/discounts_db/LOG.old
+User Data/Default/optimization_guide_hint_cache_store/LOCK
+User Data/Default/optimization_guide_hint_cache_store/LOG
+User Data/Default/optimization_guide_hint_cache_store/LOG.old
+User Data/Default/parcel_tracking_db/LOCK
+User Data/Default/parcel_tracking_db/LOG
+User Data/Default/parcel_tracking_db/LOG.old
+User Data/Default/shared_proto_db/000003.log
+User Data/Default/shared_proto_db/CURRENT
+User Data/Default/shared_proto_db/LOCK
+User Data/Default/shared_proto_db/LOG
+User Data/Default/shared_proto_db/LOG.old
+User Data/Default/shared_proto_db/MANIFEST-000001
+User Data/Default/shared_proto_db/metadata/000003.log
+User Data/Default/shared_proto_db/metadata/CURRENT
+User Data/Default/shared_proto_db/metadata/LOCK
+User Data/Default/shared_proto_db/metadata/LOG
+User Data/Default/shared_proto_db/metadata/LOG.old
+User Data/Default/shared_proto_db/metadata/MANIFEST-000001
+User Data/GrShaderCache/data_0
+User Data/GrShaderCache/data_1
+User Data/GrShaderCache/data_2
+User Data/GrShaderCache/data_3
+User Data/GrShaderCache/f_0000a0
+User Data/GrShaderCache/f_0000a1
+User Data/GrShaderCache/f_0000a2
+User Data/GrShaderCache/f_0000a3
+User Data/GrShaderCache/f_0000a4
+User Data/GrShaderCache/f_0000a5
+User Data/GrShaderCache/f_0000a6
+User Data/GrShaderCache/f_0000a7
+User Data/GrShaderCache/f_0000a8
+User Data/GrShaderCache/f_0000a9
+User Data/GrShaderCache/f_0000aa
+User Data/GrShaderCache/f_00004f
+User Data/GrShaderCache/f_00005a
+User Data/GrShaderCache/f_00005b
+User Data/GrShaderCache/f_00005c
+User Data/GrShaderCache/f_00005d
+User Data/GrShaderCache/f_00005e
+User Data/GrShaderCache/f_00005f
+User Data/GrShaderCache/f_00006a
+User Data/GrShaderCache/f_00006b
+User Data/GrShaderCache/f_00006c
+User Data/GrShaderCache/f_00006d
+User Data/GrShaderCache/f_00006e
+User Data/GrShaderCache/f_00006f
+User Data/GrShaderCache/f_00007a
+User Data/GrShaderCache/f_00007b
+User Data/GrShaderCache/f_00007c
+User Data/GrShaderCache/f_00007d
+User Data/GrShaderCache/f_00007e
+User Data/GrShaderCache/f_00007f
+User Data/GrShaderCache/f_00008a
+User Data/GrShaderCache/f_00008b
+User Data/GrShaderCache/f_00008c
+User Data/GrShaderCache/f_00008d
+User Data/GrShaderCache/f_00008e
+User Data/GrShaderCache/f_00008f
+User Data/GrShaderCache/f_00009a
+User Data/GrShaderCache/f_00009b
+User Data/GrShaderCache/f_00009c
+User Data/GrShaderCache/f_00009d
+User Data/GrShaderCache/f_00009e
+User Data/GrShaderCache/f_00009f
+User Data/GrShaderCache/f_000050
+User Data/GrShaderCache/f_000051
+User Data/GrShaderCache/f_000052
+User Data/GrShaderCache/f_000053
+User Data/GrShaderCache/f_000054
+User Data/GrShaderCache/f_000055
+User Data/GrShaderCache/f_000056
+User Data/GrShaderCache/f_000057
+User Data/GrShaderCache/f_000058
+User Data/GrShaderCache/f_000059
+User Data/GrShaderCache/f_000060
+User Data/GrShaderCache/f_000061
+User Data/GrShaderCache/f_000062
+User Data/GrShaderCache/f_000063
+User Data/GrShaderCache/f_000064
+User Data/GrShaderCache/f_000065
+User Data/GrShaderCache/f_000066
+User Data/GrShaderCache/f_000067
+User Data/GrShaderCache/f_000068
+User Data/GrShaderCache/f_000069
+User Data/GrShaderCache/f_000070
+User Data/GrShaderCache/f_000071
+User Data/GrShaderCache/f_000072
+User Data/GrShaderCache/f_000073
+User Data/GrShaderCache/f_000074
+User Data/GrShaderCache/f_000075
+User Data/GrShaderCache/f_000076
+User Data/GrShaderCache/f_000077
+User Data/GrShaderCache/f_000078
+User Data/GrShaderCache/f_000079
+User Data/GrShaderCache/f_000080
+User Data/GrShaderCache/f_000081
+User Data/GrShaderCache/f_000082
+User Data/GrShaderCache/f_000083
+User Data/GrShaderCache/f_000084
+User Data/GrShaderCache/f_000085
+User Data/GrShaderCache/f_000086
+User Data/GrShaderCache/f_000087
+User Data/GrShaderCache/f_000088
+User Data/GrShaderCache/f_000089
+User Data/GrShaderCache/f_000090
+User Data/GrShaderCache/f_000091
+User Data/GrShaderCache/f_000092
+User Data/GrShaderCache/f_000093
+User Data/GrShaderCache/f_000094
+User Data/GrShaderCache/f_000095
+User Data/GrShaderCache/f_000096
+User Data/GrShaderCache/f_000097
+User Data/GrShaderCache/f_000098
+User Data/GrShaderCache/f_000099
+User Data/GrShaderCache/index
+User Data/GrShaderCache/GPUCache/data_0
+User Data/GrShaderCache/GPUCache/data_1
+User Data/GrShaderCache/GPUCache/data_2
+User Data/GrShaderCache/GPUCache/data_3
+User Data/GrShaderCache/GPUCache/index
+User Data/GraphiteDawnCache/data_0
+User Data/GraphiteDawnCache/data_1
+User Data/GraphiteDawnCache/data_2
+User Data/GraphiteDawnCache/data_3
+User Data/GraphiteDawnCache/index
+User Data/ShaderCache/data_0
+User Data/ShaderCache/data_1
+User Data/ShaderCache/data_2
+User Data/ShaderCache/data_3
+User Data/ShaderCache/index
+User Data/ShaderCache/GPUCache/data_0
+User Data/ShaderCache/GPUCache/data_1
+User Data/ShaderCache/GPUCache/data_2
+User Data/ShaderCache/GPUCache/data_3
+User Data/ShaderCache/GPUCache/f_000001
+User Data/ShaderCache/GPUCache/f_000002
+User Data/ShaderCache/GPUCache/f_000003
+User Data/ShaderCache/GPUCache/index
+User Data/component_crx_cache/metadata.json
+User Data/segmentation_platform/ukm_db
+User Data/segmentation_platform/ukm_db-wal
