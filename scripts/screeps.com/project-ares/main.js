@@ -51,6 +51,7 @@ let diplomacyManager = require('diplomacy');
 let roleTowerManager = require('role.towerManager');
 let roleConstructionManager = require('role.constructionManager');
 let roleLinkManager = require('role.linkManager');
+let roleObserverManager = require('role.observerManager');
 let roleVisualManager = require('role.visualManager');
 
 require('require');
@@ -178,6 +179,18 @@ module.exports.loop = function () {
         let room = Game.rooms[name];
         if (room.controller && room.controller.my) {
             roleConstructionManager.run(room);
+        }
+    }
+    //#endregion
+
+    //#region Observer Manager
+    // Run every 10 ticks to save CPU
+    if (Game.time % 10 === 0) {
+        for (let name in Game.rooms) {
+            let room = Game.rooms[name];
+            if (room.controller && room.controller.my) {
+                roleObserverManager.run(room);
+            }
         }
     }
     //#endregion
