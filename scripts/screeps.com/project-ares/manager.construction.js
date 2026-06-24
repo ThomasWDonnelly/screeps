@@ -4,7 +4,7 @@
  * Manages automated construction tasks for a room, such as building roads,
  * extensions, containers, and extractors. Runs periodically to save CPU.
  */
-const constructionManager = {
+const roleConstructionManager = {
     /**
      * @param {Room} room The room to manage.
      */
@@ -110,4 +110,4 @@ const constructionManager = {
     }
 };
 
-module.exports = constructionManager;
+module.exports = roleConstructionManager;

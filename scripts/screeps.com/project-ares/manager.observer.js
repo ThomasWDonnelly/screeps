@@ -4,11 +4,11 @@
  * Automatically uses Observers to scan nearby rooms for strategic intel,
  * such as expansion opportunities, hostile presence, and valuable deposits.
  */
-const observerManager = {
+const roleObserverManager = {
     /**
      * @param {Room} room The room containing the observer.
      */
-    run: function (room) {
+    run: function(room) {
         // Observers are only available at RCL 8.
         if (room.controller.level < 8) {
             return;
@@ -64,7 +64,7 @@ const observerManager = {
      * Gathers and stores intel about a given room in Memory.
      * @param {Room} room The room to analyze.
      */
-    analyzeRoom: function (room) {
+    analyzeRoom: function(room) {
         if (!Memory.intel) Memory.intel = {};
 
         const controller = room.controller;
@@ -81,4 +81,4 @@ const observerManager = {
     }
 };
 
-module.exports = observerManager;
+module.exports = roleObserverManager;

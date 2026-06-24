@@ -21,22 +21,22 @@ let roleRemoteHarvester = require('role.remoteHarvester');
 let roleRemoteStationaryHarvester = require('role.remoteStationaryHarvester');
 let roleRemoteReserver = require('role.remoteReserver');
 let roleRemoteGuard = require('role.remoteGuard');
-let roleRemoteManager = require('role.remoteManager');
+let roleRemoteManager = require('manager.remote');
 let roleRemoteScout = require('role.remoteScout');
 let roleEnergyHauler = require('role.energyHauler');
-let roleTerminalManager = require('role.terminalManager');
-let roleLabManager = require('role.labManager');
-let roleFactoryManager = require('role.factoryManager');
-let roleNukeManager = require('role.nukeManager');
-let roleMarketManager = require('role.marketManager');
-let roleBoostManager = require('role.boostManager');
+let roleTerminalManager = require('manager.terminal');
+let roleLabManager = require('manager.lab');
+let roleFactoryManager = require('manager.factory');
+let roleNukeManager = require('manager.nuke');
+let roleMarketManager = require('manager.market');
+let roleBoostManager = require('manager.boost');
 let rolePortalScout = require('role.portalScout');
 let rolePowerHarvester = require('role.powerHarvester');
 let rolePowerAttacker = require('role.powerAttacker');
 let roleDepositMiner = require('role.depositMiner');
 let roleTactical = require('role.tactical');
 let roleCommander = require('role.commander');
-let squadManager = require('squadManager');
+let squadManager = require('manager.squad');
 let tacticPhalanx = require('tactic.phalanx');
 let tacticGuard = require('tactic.guard');
 let tacticRetaliation = require('tactic.retaliation');
@@ -47,12 +47,12 @@ let roleMortician = require('role.mortician');
 let roleCoroner = require('role.coroner');
 let roleNecromancer = require('role.necromancer');
 let roleArchaeologist = require('role.archaeologist');
-let diplomacyManager = require('diplomacy');
-let roleTowerManager = require('role.towerManager');
-let roleConstructionManager = require('role.constructionManager');
-let roleLinkManager = require('role.linkManager');
-let roleObserverManager = require('role.observerManager');
-let roleVisualManager = require('role.visualManager');
+let diplomacy = require('diplomacy');
+let roleTowerManager = require('manager.tower');
+let roleConstructionManager = require('manager.construction');
+let roleLinkManager = require('manager.link');
+let roleObserverManager = require('manager.observer');
+let roleVisualManager = require('manager.visual');
 
 require('require');
 global.config = require('config');
@@ -101,7 +101,7 @@ const roleModules = {
 
 // Global command for setting player status from the console
 global.setPlayerStatus = function (username, status) {
-    return diplomacyManager.setStatus(username, status);
+    return diplomacy.setStatus(username, status);
 };
 
 module.exports.loop = function () {
@@ -109,7 +109,7 @@ module.exports.loop = function () {
     roleMortician.run();
 
     // Run Diplomacy Manager to track friends and foes
-    diplomacyManager.run();
+    diplomacy.run();
 
     // Run Coroner Report periodically
     if (Game.time % 5000 === 0) {

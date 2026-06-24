@@ -5,7 +5,7 @@
  * near sources as 'senders' and attempts to transfer their energy to a
  * 'receiver' link, typically near the controller or storage.
  */
-const linkManager = {
+const roleLinkManager = {
     /**
      * @param {Room} room The room to manage links in.
      */
@@ -55,4 +55,4 @@ const linkManager = {
     }
 };
 
-module.exports = linkManager;
+module.exports = roleLinkManager;

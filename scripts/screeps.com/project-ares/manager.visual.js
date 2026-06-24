@@ -4,7 +4,7 @@
  * Draws helpful information onto the screen for a given room.
  * This includes controller progress, energy levels, creep counts, and more.
  */
-const visualManager = {
+const roleVisualManager = {
     /**
      * @param {Room} room The room to draw visuals for.
      * @param {object} roleCounts A count of creeps for each role.
@@ -44,4 +44,4 @@ const visualManager = {
     }
 };
 
-module.exports = visualManager;
+module.exports = roleVisualManager;

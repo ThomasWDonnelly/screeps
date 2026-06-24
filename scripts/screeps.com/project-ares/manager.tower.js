@@ -1,6 +1,6 @@
 const diplomacyManager = require('diplomacy');
 
-const towerManager = {
+const roleTowerManager = {
     /**
      * Runs the logic for all towers in a given room.
      * @param {Room} room The room to manage.
@@ -43,4 +43,4 @@ const towerManager = {
     }
 };
 
-module.exports = towerManager;
+module.exports = roleTowerManager;
