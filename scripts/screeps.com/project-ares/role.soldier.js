@@ -6,6 +6,8 @@
  * var mod = require('role.soldier');
  * mod.thing == 'a thing'; // true
  */
+const diplomacyManager = require('diplomacy');
+
 let roleSoldier = {
     /** @param {Creep} creep **/
     run: function (creep) {
@@ -42,35 +44,39 @@ let roleSoldier = {
         }
 
         // 1. Attack closest hostile creep
-        let target = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
-        if(target) {
+        let target = creep.pos.findClosestByRange(FIND_HOSTILE_CREEPS, {
+            filter: (c) => diplomacyManager.getStatus(c.owner.username) !== 'ally'
+        });
+        if (target) {
             creep.room.debugLog('combat', 'Soldier ' + creep.name + ' engaging hostile ' + target.name + ' at ' + target.pos);
-            if(creep.attack(target) == ERR_NOT_IN_RANGE) {
+            if (creep.attack(target) == ERR_NOT_IN_RANGE) {
                 creep.moveToTarget(target, '#ff0000');
             }
             return;
         }
-        
+
         // 2. Attack closest hostile structure
-        let hostileStructure = creep.pos.findClosestByRange(FIND_HOSTILE_STRUCTURES);
-        if(hostileStructure) {
+        let hostileStructure = creep.pos.findClosestByRange(FIND_HOSTILE_STRUCTURES, {
+            filter: (s) => s.owner && diplomacyManager.getStatus(s.owner.username) !== 'ally'
+        });
+        if (hostileStructure) {
             creep.room.debugLog('combat', 'Soldier ' + creep.name + ' engaging structure ' + hostileStructure.structureType + ' at ' + hostileStructure.pos);
-            if(creep.attack(hostileStructure) == ERR_NOT_IN_RANGE) {
+            if (creep.attack(hostileStructure) == ERR_NOT_IN_RANGE) {
                 creep.moveToTarget(hostileStructure, '#ff0000');
             }
             return;
         }
-        
+
         // 3. Move to 'Attack' flag if defined (Manual Aggression)
         let flag = Game.flags['Attack'];
-        if(flag) {
-            if(!creep.pos.inRangeTo(flag, 3)) {
+        if (flag) {
+            if (!creep.pos.inRangeTo(flag, 3)) {
                 creep.moveToTarget(flag, '#ff0000');
             }
         } else {
             // 4. Patrol Path (Flags named Patrol1, Patrol2, etc.)
             let patrolFlags = Object.keys(Game.flags).filter(n => n.startsWith('Patrol')).sort();
-            
+
             if (patrolFlags.length > 0) {
                 if (creep.memory.patrolIndex === undefined || creep.memory.patrolIndex >= patrolFlags.length) {
                     creep.memory.patrolIndex = 0;
@@ -91,7 +97,7 @@ let roleSoldier = {
                 }
             }
         }
-     }
+    }
 };
 
 module.exports = roleSoldier;
