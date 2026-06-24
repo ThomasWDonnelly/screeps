@@ -51,6 +51,7 @@ let diplomacyManager = require('diplomacy');
 let roleTowerManager = require('role.towerManager');
 let roleConstructionManager = require('role.constructionManager');
 let roleLinkManager = require('role.linkManager');
+let roleVisualManager = require('role.visualManager');
 
 require('require');
 global.config = require('config');
@@ -158,6 +159,16 @@ module.exports.loop = function () {
         if (flag.room && flag.room.controller && flag.room.controller.my) {
             console.log('Room ' + flag.room.name + ' successfully claimed. Removing Claim flag.');
             flag.remove();
+        }
+    }
+    //#endregion
+
+    //#region Visual Manager
+    for (let name in Game.rooms) {
+        let room = Game.rooms[name];
+        if (room.controller && room.controller.my) {
+            // Pass roleCounts for the specific room if needed, or global for now
+            roleVisualManager.run(room, _.countBy(_.filter(Game.creeps, c => c.room.name === name), c => c.memory.role));
         }
     }
     //#endregion
