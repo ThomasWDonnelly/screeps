@@ -5,46 +5,71 @@
  * Analyzes Intel to place flags for exploration and attacks.
  * Directs Squads.
  */
+const diplomacy = require('diplomacy');
+const heralds = require('heralds');
+
 module.exports = {
     /** @param {Creep} creep **/
-    run: function(creep) {
+    run: function (creep) {
         // 1. Analyze Intel
         if (!Memory.intel) Memory.intel = {};
-        
-        let bestTarget = null;
+        const prophecy = Memory.oracle ? Memory.oracle.prophecy : null;
+
+        let potentialTargets = [];
         let bestExplore = null;
-        
+
         // Find potential targets
         for (let roomName in Memory.intel) {
             let data = Memory.intel[roomName];
-            
-            // Ignore my own rooms
-            if (data.owner === creep.owner.username) continue;
-            
-            // Identify Hostile Rooms for Retaliation
-            if (data.owner && data.owner !== 'Invader' && data.owner !== 'Source Keeper') {
-                // Simple logic: If it's an enemy, it's a target
-                bestTarget = roomName;
+
+            // Identify Hostile Rooms for Retaliation, ignoring own rooms and allies
+            if (data.owner && data.owner !== creep.owner.username && diplomacy.getStatus(data.owner) !== 'ally') {
+                // Score the target. Lower score is better.
+                // Prioritize low RCL, few towers.
+                let score = (data.rcl * 10) + (data.hostileTowers * 20);
+
+                // Bonus for being a declared enemy
+                if (diplomacy.getStatus(data.owner) === 'enemy') {
+                    score -= 50;
+                }
+
+                // HUGE bonus if it's the target of a CONQUEST prophecy
+                if (prophecy && prophecy.type === 'CONQUEST' && prophecy.target === data.owner) {
+                    score -= 1000; // Make this the top priority
+                }
+
+                potentialTargets.push({ roomName, score });
             }
-            
+
             // Identify Old Intel for Exploration
             if (Game.time - data.lastScouted > 5000) {
                 bestExplore = roomName;
             }
         }
 
+        // Sort targets by score to find the best one
+        potentialTargets.sort((a, b) => a.score - b.score);
+        let bestTarget = potentialTargets.length > 0 ? potentialTargets[0].roomName : null;
+
         // 2. Manage Retaliation Flag
         if (bestTarget) {
             if (!Game.flags['Retaliate']) {
-                // We don't have visibility to place it exactly, so we place it in our room pointing to it?
-                // Flags must be placed in visible rooms or via console. 
-                // Programmatically, we can only create flags in rooms we see.
-                // However, we can direct squads to a room name.
-                // For this implementation, we will place the flag if we have vision, 
-                // or rely on the squad logic to accept a room name target if we update it.
-                // Since we can't place flags in the dark, the Commander will place a 'Staging' flag locally
-                // and print the target to console for the player to confirm/place.
-                console.log(`[Commander] Target Identified: ${bestTarget}. Place 'Retaliate' flag there.`);
+                // If we have vision of the target room (from an observer), place the flag.
+                const targetRoom = Game.rooms[bestTarget];
+                if (targetRoom) {
+                    const hostileSpawn = targetRoom.find(FIND_HOSTILE_SPAWNS)[0];
+                    const flagPos = hostileSpawn ? hostileSpawn.pos : new RoomPosition(25, 25, bestTarget);
+                    targetRoom.createFlag(flagPos, 'Retaliate', COLOR_RED);
+                    console.log(`[Commander] Target acquired in ${bestTarget}. Placing Retaliate flag!`);
+
+                    // Announce via Herald
+                    const targetOwner = Memory.intel[bestTarget].owner;
+                    if (targetOwner) {
+                        heralds.sendMessage(`Hostilities declared against ${targetOwner} in room ${bestTarget}.`);
+                    }
+                } else {
+                    console.log(`[Commander] Target Identified: ${bestTarget}. Waiting for vision to place flag.`);
+                }
             }
         }
 
@@ -59,7 +84,7 @@ module.exports = {
                 const dirs = Object.keys(exits);
                 if (dirs.length > 0) {
                     const targetRoom = exits[dirs[Math.floor(Math.random() * dirs.length)]];
-                    
+
                     // Place flag at the exit
                     const exitDir = creep.room.findExitTo(targetRoom);
                     const exit = creep.pos.findClosestByRange(exitDir);

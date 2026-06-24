@@ -245,17 +245,25 @@ const spawnManager = {
         }
 
         let body = [];
-        if (role === 'harvester' || role === 'upgrader' || role === 'builder' || role === 'repairer' || role === 'wallRepairer') {
-            let parts = Math.floor(capacity / 250);
-            parts = Math.min(parts, 8);
+        // Generic Worker Body (WORK/CARRY/MOVE)
+        if (['harvester', 'upgrader', 'builder', 'repairer', 'wallRepairer', 'remoteBuilder', 'remoteHarvester', 'remoteManager'].includes(role)) {
+            const maxParts = {
+                'harvester': 8, 'upgrader': 8, 'builder': 8, 'repairer': 8, 'wallRepairer': 8,
+                'remoteBuilder': 5, 'remoteHarvester': 5,
+                'remoteManager': 6,
+            };
+            let parts = Math.floor(capacity / 250); // 1 WORK, 1 CARRY, 2 MOVE = 250 cost
+            parts = Math.min(parts, maxParts[role] || 8);
+
             if (parts === 0) {
-                if (capacity >= 200) return [WORK, CARRY, MOVE];
-                return [WORK, CARRY, MOVE, MOVE];
+                // Fallback for very low energy recovery, especially for harvesters
+                return (capacity >= 200) ? [WORK, CARRY, MOVE] : [WORK, CARRY, MOVE, MOVE];
             }
             for (let i = 0; i < parts; i++) {
                 body.push(WORK); body.push(CARRY); body.push(MOVE); body.push(MOVE);
             }
-        } else if (role === 'soldier') {
+        }
+        else if (role === 'soldier' || role === 'remoteGuard') {
             let parts = Math.floor(capacity / 140);
             parts = Math.min(parts, 10);
             if (parts === 0) parts = 1;

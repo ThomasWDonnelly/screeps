@@ -4,6 +4,7 @@
  * Draws helpful information onto the screen for a given room.
  * This includes controller progress, energy levels, creep counts, and more.
  */
+const oracleAtDelphi = require('oracleAtDelphi');
 const roleVisualManager = {
     /**
      * @param {Room} room The room to draw visuals for.
@@ -41,6 +42,13 @@ const roleVisualManager = {
         const sites = room.find(FIND_CONSTRUCTION_SITES);
         room.visual.text(`⚔️ Hostiles: ${hostiles.length}`, x, y++, { align, font, color: hostiles.length > 0 ? '#ff0000' : '#ffffff' });
         room.visual.text(`🚧 Sites: ${sites.length}`, x, y++, { align, font });
+
+        // Current Prophecy
+        const prophecy = Memory.oracle ? Memory.oracle.prophecy : null;
+        if (prophecy) {
+            room.visual.text(`📜 Prophecy:`, x, y++, { align, font: 0.8 });
+            room.visual.text(`${oracleAtDelphi.getProphecyText(prophecy)}`, x, y++, { align, font: 0.6 });
+        }
     }
 };
 

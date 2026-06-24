@@ -53,6 +53,8 @@ let roleConstructionManager = require('manager.construction');
 let roleLinkManager = require('manager.link');
 let roleObserverManager = require('manager.observer');
 let roleVisualManager = require('manager.visual');
+let heralds = require('heralds');
+let oracleAtDelphi = require('oracleAtDelphi');
 
 require('require');
 global.config = require('config');
@@ -104,6 +106,11 @@ global.setPlayerStatus = function (username, status) {
     return diplomacy.setStatus(username, status);
 };
 
+// Global command for sending public messages
+global.herald = {
+    send: heralds.sendMessage
+};
+
 module.exports.loop = function () {
     // "Bring Out Your Dead" - The Mortician handles dead creep memory
     roleMortician.run();
@@ -114,6 +121,9 @@ module.exports.loop = function () {
     // Run Coroner Report periodically
     if (Game.time % 5000 === 0) {
         roleCoroner.run();
+
+        // The Oracle speaks
+        oracleAtDelphi.run();
     }
 
     // Efficiently count creeps by role
