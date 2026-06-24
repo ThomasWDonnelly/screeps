@@ -47,6 +47,9 @@ let roleMortician = require('role.mortician');
 let roleCoroner = require('role.coroner');
 let roleNecromancer = require('role.necromancer');
 let roleArchaeologist = require('role.archaeologist');
+let diplomacyManager = require('diplomacy');
+let roleTowerManager = require('role.towerManager');
+let roleConstructionManager = require('role.constructionManager');
 
 require('require');
 global.config = require('config');
@@ -90,12 +93,20 @@ const roleModules = {
     'tactical': roleTactical,
     'commander': roleCommander,
     'necromancer': roleNecromancer,
-    'archaeologist': roleArchaeologist,
+    'archaeologist': roleArchaeologist
+};
+
+// Global command for setting player status from the console
+global.setPlayerStatus = function (username, status) {
+    return diplomacyManager.setStatus(username, status);
 };
 
 module.exports.loop = function () {
     // "Bring Out Your Dead" - The Mortician handles dead creep memory
     roleMortician.run();
+
+    // Run Diplomacy Manager to track friends and foes
+    diplomacyManager.run();
 
     // Run Coroner Report periodically
     if (Game.time % 5000 === 0) {
@@ -115,10 +126,6 @@ module.exports.loop = function () {
 
     //#region Information
     // Get the available energy in the room
-    for (let name in Game.rooms) {
-        console.log('Room "' + name + '" has ' + Game.rooms[name].energyAvailable + ' energy');
-    }
-
     let spawn = Game.spawns['Spawn1'] || Object.values(Game.spawns)[0];
 
     // Auto-Place Patrol Flags
@@ -152,108 +159,13 @@ module.exports.loop = function () {
             flag.remove();
         }
     }
-
-    // Auto-Build Road to Spawn from first Source
-    if (spawn && spawn.room.find(FIND_CONSTRUCTION_SITES).length == 0) {
-        let sources = spawn.room.find(FIND_SOURCES);
-        if (sources.length > 0) {
-            let path = spawn.pos.findPathTo(sources[0], { ignoreCreeps: true });
-            if (path.length > 0) {
-                let midPoint = path[Math.floor(path.length / 2)];
-                spawn.room.createConstructionSite(midPoint.x, midPoint.y, STRUCTURE_ROAD);
-            }
-        }
-    }
-
-    // Auto-Build Roads to Controller (Check every 1000 ticks)
-    if (spawn && Game.time % 1000 === 0) {
-        let path = spawn.pos.findPathTo(spawn.room.controller, { ignoreCreeps: true });
-        for (let i = 0; i < path.length; i++) {
-            spawn.room.createConstructionSite(path[i].x, path[i].y, STRUCTURE_ROAD);
-        }
-    }
     //#endregion
 
-    //#region Auto-Build Extensions
-    // (Check every 100 ticks)
-    if (spawn && Game.time % 100 === 0 && spawn.room.controller.level >= 2) {
-        let extensions = spawn.room.find(FIND_MY_STRUCTURES, {
-            filter: { structureType: STRUCTURE_EXTENSION }
-        });
-        let sites = spawn.room.find(FIND_MY_CONSTRUCTION_SITES, {
-            filter: { structureType: STRUCTURE_EXTENSION }
-        });
-
-        // If we have fewer extensions + sites than allowed by the current controller level
-        if (extensions.length + sites.length < CONTROLLER_STRUCTURES[STRUCTURE_EXTENSION][spawn.room.controller.level]) {
-            for (let x = -5; x <= 5; x++) {
-                for (let y = -5; y <= 5; y++) {
-                    let checkX = spawn.pos.x + x;
-                    let checkY = spawn.pos.y + y;
-
-                    // Checkerboard pattern (only build on even sum coordinates) to ensure paths
-                    if ((x + y) % 2 !== 0) continue;
-
-                    // Try to create construction site (returns OK if successful)
-                    if (spawn.room.createConstructionSite(checkX, checkY, STRUCTURE_EXTENSION) === OK) {
-                        // Break loops to place one at a time
-                        x = 10; y = 10;
-                    }
-                }
-            }
-        }
-    }
-    //#endregion
-
-    //#region Auto-Build Containers
-    // (Check every 500 ticks)
-    if (spawn && Game.time % 500 === 0) {
-        let sources = spawn.room.find(FIND_SOURCES);
-        for (let source of sources) {
-            // Check for existing container within range 1
-            let containers = source.pos.findInRange(FIND_STRUCTURES, 1, {
-                filter: { structureType: STRUCTURE_CONTAINER }
-            });
-
-            if (containers.length === 0) {
-                // Check for construction site
-                let sites = source.pos.findInRange(FIND_CONSTRUCTION_SITES, 1, {
-                    filter: { structureType: STRUCTURE_CONTAINER }
-                });
-
-                if (sites.length === 0) {
-                    // Try to build under a miner if one exists (perfect placement)
-                    let miner = source.pos.findInRange(FIND_MY_CREEPS, 1, {
-                        filter: (c) => c.memory.role == 'miner'
-                    })[0];
-
-                    if (miner) {
-                        spawn.room.createConstructionSite(miner.pos, STRUCTURE_CONTAINER);
-                    } else {
-                        // Fallback: Calculate path from spawn and place container at the last step
-                        let path = spawn.pos.findPathTo(source, { ignoreCreeps: true, range: 1 });
-                        if (path.length > 0) {
-                            let lastStep = path[path.length - 1];
-                            spawn.room.createConstructionSite(lastStep.x, lastStep.y, STRUCTURE_CONTAINER);
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //#endregion
-
-    //#region Auto-Build Extractor
-    // (Check every 1000 ticks)
-    if (spawn && Game.time % 1000 === 0 && spawn.room.controller.level >= 6) {
-        let minerals = spawn.room.find(FIND_MINERALS);
-        for (let mineral of minerals) {
-            let hasExtractor = mineral.pos.lookFor(LOOK_STRUCTURES).some(s => s.structureType == STRUCTURE_EXTRACTOR);
-            let hasSite = mineral.pos.lookFor(LOOK_CONSTRUCTION_SITES).some(s => s.structureType == STRUCTURE_EXTRACTOR);
-
-            if (!hasExtractor && !hasSite) {
-                spawn.room.createConstructionSite(mineral.pos, STRUCTURE_EXTRACTOR);
-            }
+    //#region Construction Manager
+    for (let name in Game.rooms) {
+        let room = Game.rooms[name];
+        if (room.controller && room.controller.my) {
+            roleConstructionManager.run(room);
         }
     }
     //#endregion
@@ -334,40 +246,21 @@ module.exports.loop = function () {
     if (spawn) {
         spawnManager.run(spawn, roleCounts);
 
-        let towers = spawn.room.find(FIND_MY_STRUCTURES, {
-            filter: { structureType: STRUCTURE_TOWER }
-        });
-
-        for (let tower of towers) {
-            // 1. Heal Critical Friendlies (Soldiers/Medics)
-            let criticalCreep = tower.pos.findClosestByRange(FIND_MY_CREEPS, {
-                filter: (c) => c.hits < c.hitsMax * 0.5 && (c.memory.role == 'soldier' || c.memory.role == 'medic')
-            });
-            if (criticalCreep) {
-                tower.heal(criticalCreep);
-                continue;
-            }
-
-            // 2. Attack Hostiles
-            let closestHostile = tower.pos.findClosestByRange(FIND_HOSTILE_CREEPS);
-            if (closestHostile) {
-                tower.attack(closestHostile);
-                continue;
-            }
-
-            // 3. Repair Structures (Exclude walls to save energy for defense)
-            let closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
-                filter: (structure) => structure.hits < structure.hitsMax && structure.structureType != STRUCTURE_WALL
-            });
-            if (closestDamagedStructure) {
-                tower.repair(closestDamagedStructure);
-            }
-        }
         let powerSpawn = spawn.room.find(FIND_MY_STRUCTURES, {
             filter: { structureType: STRUCTURE_POWER_SPAWN }
         })[0];
         if (powerSpawn) {
             powerSpawn.processPower();
+        }
+    }
+    //#endregion
+
+    //#region Tower Manager
+    // Run Tower Manager for all rooms with a controller
+    for (let name in Game.rooms) {
+        let room = Game.rooms[name];
+        if (room.controller && room.controller.my) {
+            roleTowerManager.run(room);
         }
     }
     //#endregion
