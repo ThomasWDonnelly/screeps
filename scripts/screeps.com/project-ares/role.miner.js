@@ -9,7 +9,7 @@
 var roleMiner = {
 
     /** @param {Creep} creep **/
-    run: function(creep) {
+    run: function (creep) {
         let target = null;
 
         // 1. Priority: Minerals (with Extractor, no miner)
@@ -18,7 +18,7 @@ var roleMiner = {
             filter: (m) => {
                 let hasExtractor = m.pos.lookFor(LOOK_STRUCTURES).some(s => s.structureType == STRUCTURE_EXTRACTOR);
                 if (!hasExtractor) return false;
-                return m.pos.findInRange(FIND_CREEPS, 1, {
+                return m.pos.findInRange(FIND_MY_CREEPS, 1, {
                     filter: (c) => c.memory.role == 'miner' && c.id !== creep.id
                 }).length == 0;
             }
@@ -30,7 +30,7 @@ var roleMiner = {
             // 2. Fallback: Energy Sources
             var sources = creep.room.find(FIND_SOURCES);
             var source = creep.pos.findClosestByPath(sources, {
-                filter: (s) => s.pos.findInRange(FIND_CREEPS, 1, {
+                filter: (s) => s.pos.findInRange(FIND_MY_CREEPS, 1, {
                     filter: (c) => c.memory.role == 'miner' && c.id !== creep.id
                 }).length == 0
             });
@@ -43,12 +43,12 @@ var roleMiner = {
         }
 
         if (target) {
-            if(creep.harvest(target) == ERR_NOT_IN_RANGE) {
+            if (creep.harvest(target) == ERR_NOT_IN_RANGE) {
                 creep.moveToTarget(target, '#ffaa00');
             } else {
                 // If full, prioritize Link > Container > Drop
                 if (creep.store.getFreeCapacity() === 0) {
-                    for(const resourceType of Object.keys(creep.store)) {
+                    for (const resourceType of Object.keys(creep.store)) {
                         // 1. Try Link (Only for Energy)
                         if (resourceType == RESOURCE_ENERGY) {
                             let link = creep.pos.findClosestByRange(FIND_STRUCTURES, {
